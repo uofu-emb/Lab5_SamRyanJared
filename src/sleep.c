@@ -14,6 +14,9 @@ void sleep_main(void)
 
     while (1) {
         gpio_pin_toggle(dev_out, PIN_OUT);
+        //k_busy_wait(250); //250ms delay-may be different compared to k_msec(250) delay due to offsets
+        k_busy_wait(500); //500ms delay-may be different compared to k_msec(250) delay due to offsets
+
         k_sleep(K_MSEC(1));
     }
 }

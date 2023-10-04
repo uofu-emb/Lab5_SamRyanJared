@@ -16,6 +16,7 @@ void pin_interrupt(const struct device *port,
                    gpio_port_pins_t pins_)
 {
     gpio_pin_toggle(port, PIN_OUT);
+    k_busy_wait(250); //250ms delay-may be different compared to k_msec(250) delay due to offsets
 }
 
 void interrupt_main(void)
