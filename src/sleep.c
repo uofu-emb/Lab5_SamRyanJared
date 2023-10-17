@@ -15,8 +15,16 @@ void sleep_main(void)
     while (1) {
         gpio_pin_toggle(dev_out, PIN_OUT);
         //k_busy_wait(250); //250ms delay-may be different compared to k_msec(250) delay due to offsets
-        k_busy_wait(500); //500ms delay-may be different compared to k_msec(250) delay due to offsets
+        //k_busy_wait(1200); //1200us delay-may be different compared to k_msec(250) delay due to offsets
+        //k_busy_wait(2500); //2500us delay-may be different compared to k_msec(250) delay due to offsets
 
-        k_sleep(K_MSEC(1));
+        //k_sleep(K_MSEC(1));
+
+        ///busy.c section e
+        //k_busy_wait(1000); //1000us delay-simulate k sleep k m sec =1
+        //k_busy_wait(1500); //1500us delay-simulate k sleep k m sec =1.5
+        k_busy_wait(2500); //1000us delay-simulate k sleep k m sec =2.5
+
+
     }
 }

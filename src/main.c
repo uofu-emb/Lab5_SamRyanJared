@@ -33,6 +33,8 @@ void main(void)
 
 #ifdef INTERRUPT_ACTIVITY
     printf("Running interrupts\n");
+        
+    k_busy_wait(20000);
     interrupt_main();
 #endif
 }

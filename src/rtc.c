@@ -11,9 +11,6 @@
 #error "missing counter"
 #endif
 
-#if !DT_NODE_HAS_STATUS(TIMER, okay)
-#error "missing counter"
-#endif
 
 #define DEV_OUT DT_NODELABEL(gpioa)
 #define PIN_OUT 0
@@ -29,6 +26,7 @@ static void alarm_interrupt(const struct device *d,
                      void *user_data)
 {
     gpio_pin_toggle(dev_gpio, PIN_OUT);
+	//k_busy_wait(1200); //1200us
 	int err = counter_set_channel_alarm(dev_count, 0, user_data);
 	if (err != 0) {
 		printk("Alarm could not be set\n");
