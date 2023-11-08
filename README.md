@@ -193,7 +193,7 @@ Section-2: Measuring Latency of interrupt handler
 			-k_busy_wait(500) increase by 500µs for toggle delay
 				-Delay: +498.834µs
 			-k_busy_wait(900) increase by 900µs for toggle delay
-				-Delay: +92.736µs
+				-Delay: +927.36µs
 			-k_busy_wait(1000) increase by 1000µs for toggle delay
 				-Delay: imeasurable, signal no jumps around too much for delay capture/measurement
 
